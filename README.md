@@ -22,7 +22,7 @@ grunt.loadNpmTasks('grunt-jest');
 
 
 ## Run tests
-_Run this task with the `grunt jest` command._
+_Run this task with the `grunt jest:default` command._
 
 Task options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 ### Options
@@ -71,9 +71,11 @@ processes that run tests). This is sometimes useful for debugging, but such use 
 
 ```js
 jest: {
-  options: {
-    coverage: true,
-    testPathPattern: /.*-test.js/
+  default: {
+    options: {
+      coverage: true,
+      testPathPattern: /.*-test.js/
+    }
   }
 }
 ```
